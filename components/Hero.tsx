@@ -23,7 +23,7 @@ export default function Hero({}: Props) {
         src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-b2B8tGUafEC8dq-g_zkP5TCm2LPBonFow&usqp=CAU'
         alt='image'
       />
-      <div>
+      <div className="z-20">
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
           software engineer
         </h2>
