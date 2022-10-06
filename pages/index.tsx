@@ -4,6 +4,7 @@ import Image from 'next/image'
 import About from '../components/About'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
 
 const Home: NextPage = () => {
@@ -31,6 +32,10 @@ const Home: NextPage = () => {
       </section>
 
       {/* skills  */}
+      <section id="skills" className="snap-start">
+        <Skills/>
+      </section>
+
 
       {/* projects */}
     </div>
