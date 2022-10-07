@@ -7,26 +7,25 @@ function Projects({}: Props) {
   const projects = [1, 2, 3, 4, 5]
   return (
     <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:1.5}}
-
-    className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'
+    >
       <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
         Projects
       </h3>
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
         {projects.map((project, i) => (
           <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
             <motion.img
-             initial={{
-              y:-300,
-              opacity:0
-             }}
-             transition={{duration:1.2}}
-             whileInView={{opacity:1,y:0}}
-             viewport={{once:true}}
-
+              initial={{
+                y: -300,
+                opacity: 0,
+              }}
+              transition={{ duration: 1.2 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiCb38x4VIvRIQUFYZ85w2VtqR_Ze9dvWUu11PERRVHbC5AtqsJX101gJG2kH2ocmx4tg&usqp=CAU'
               alt='project img'
             />
@@ -39,8 +38,12 @@ function Projects({}: Props) {
                 UPS clone
               </h4>
               <p className='text-lg text-center md:text-left'>
-                Netflix app that has a long in and log out authentication with google it has a beatuful home screen with all the movies looking just like netflix there is also a subscription page where you can see your active monthly subscription. we also use stripe payments for the monthly netflix payment
-                </p>
+                Netflix app that has a long in and log out authentication with
+                google it has a beatuful home screen with all the movies looking
+                just like netflix there is also a subscription page where you
+                can see your active monthly subscription. we also use stripe
+                payments for the monthly netflix payment
+              </p>
             </div>
           </div>
         ))}
