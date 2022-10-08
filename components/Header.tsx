@@ -60,7 +60,7 @@ export default function Header({}: Props) {
             fgColor='gray'
             bgColor='transparent'
           />
-          <p className='uppercase'>get in touch</p>
+          <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>get in touch</p>
         </motion.div>
       </Link>
     </header>
