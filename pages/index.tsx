@@ -10,6 +10,9 @@ import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
 
+
+
+
 const Home: NextPage = () => {
   return (
     
