@@ -30,9 +30,9 @@ function ContactMe({}: Props) {
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
             <p className='text-xl'>+123456789</p>
           </div> */}
-          <div className='flex items-center space-x-5 justify-center'>
-            <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-sm'>nizarharb@gmail.com</p>
+          <div className='flex items-center space-x-4 justify-center'>
+            <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse ' />
+            <p className='text-sm '>nizarharb@gmail.com</p>
           </div>
           {/* <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
