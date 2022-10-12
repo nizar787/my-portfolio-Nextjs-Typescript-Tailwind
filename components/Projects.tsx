@@ -54,4 +54,3 @@ function Projects({}: Props) {
 }
 
 export default Projects
-// git hard reset test (and head detached)
