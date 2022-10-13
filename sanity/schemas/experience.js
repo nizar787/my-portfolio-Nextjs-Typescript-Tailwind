@@ -21,13 +21,13 @@ export default {
       title: 'Company',
       type: 'text',
     },
-    
+
     {
       name: 'dateStarted',
       title: 'DateStarted',
       type: 'date',
     },
-    
+
     {
       name: 'dateEnded',
       title: 'DateEnded',
@@ -42,13 +42,13 @@ export default {
       name: 'technologies',
       title: 'Technologies',
       type: 'array',
-      of:[{ type:" reference", to:{ type: "skill" } }]
+      of: [{ type: 'reference', to: { type: 'skill' } }],
     },
     {
       name: 'points',
       title: 'Points',
       type: 'array',
-      of:[{type: 'string' }],
+      of: [{ type: 'string' }],
     },
   ],
 }

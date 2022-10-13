@@ -21,35 +21,19 @@ export default {
       title: 'Summary',
       type: 'text',
     },
-    
+
     {
       name: 'technologies',
       title: 'Technologies',
       type: 'array',
-      of:[{type: 'reference', to:{type:'skill'}}],
+      of: [{ type: 'reference', to: { type: 'skill' } }],
     },
-    
+
     {
       name: 'linkToBuild',
       title: 'LinkToBuild',
       type: 'url',
     },
-    {
-      name: 'isCurrentlyWorkingHere',
-      title: 'IsCurrentlyWorkingHere',
-      type: 'boolean',
-    },
-    {
-      name: 'technologies',
-      title: 'Technologies',
-      type: 'array',
-      of:[{ type:" reference", to:{ type: "skill" } }]
-    },
-    {
-      name: 'points',
-      title: 'Points',
-      type: 'array',
-      of:[{type: 'string' }],
-    },
+    
   ],
 }
