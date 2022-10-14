@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  pageInfo:PageInfo
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +33,7 @@ function About({}: Props) {
         viewport={{
           once: true,
         }}
-        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6-b2B8tGUafEC8dq-g_zkP5TCm2LPBonFow&usqp=CAU'
+        src={urlFor(pageInfo?.profilePic).url()}
         className='-mb-20 md:mb-0 flex-shrink-0 w-20 h-20 rounded-full object-cover md:rounded-lg md:w-32 md:h-32 
         xl:w-[150px] xl:h-[150px]'
       />
@@ -40,9 +44,7 @@ function About({}: Props) {
           background
         </h4>
         <p className='text-base'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis eum
-          mollitia qui magnam neque corrupti alias quasi libero nesciunt atque
-          voluptates molestias, sequi hic eligendi labore illo quidem doloribus
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
