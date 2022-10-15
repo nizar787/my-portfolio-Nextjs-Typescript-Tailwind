@@ -24,14 +24,14 @@ type Props = {
   socials: Social[]
 }
 
-const Home = ({pageInfo,experiences,projects,skills,socials}:Props) => {
+const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
       <Head>
-        <title>nizar portfolio</title>
+        <title>{pageInfo?.name} - portfolio</title>
       </Head>
 
-      <Header socials={socials}/>
+      <Header socials={socials} />
 
       {/* hero */}
       <section id='hero' className='snap-center'>
@@ -40,7 +40,7 @@ const Home = ({pageInfo,experiences,projects,skills,socials}:Props) => {
 
       {/* about */}
       <section id='about' className='snap-center'>
-        <About pageInfo={pageInfo}/>
+        <About pageInfo={pageInfo} />
       </section>
 
       {/*experience */}
@@ -50,7 +50,7 @@ const Home = ({pageInfo,experiences,projects,skills,socials}:Props) => {
 
       {/* skills  */}
       <section id='skills' className='snap-start'>
-        <Skills skills={skills}/>
+        <Skills skills={skills} />
       </section>
 
       {/* projects */}
@@ -93,9 +93,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    // next.js will attempt to re-generate the page 
-    // when a request comes in 
+    // next.js will attempt to re-generate the page
+    // when a request comes in
     // at most once every 30s
-    revalidate:30
+    revalidate: 10,
   }
 }
