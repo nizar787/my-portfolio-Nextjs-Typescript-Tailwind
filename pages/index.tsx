@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -96,6 +96,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     // next.js will attempt to re-generate the page
     // when a request comes in
     // at most once every 30s
-    revalidate: 10,
+    // revalidate:10,
   }
 }
