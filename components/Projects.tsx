@@ -2,6 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Project } from '../typings'
 import { urlFor } from '../sanity'
+import { SocialIcon } from 'react-social-icons'
+import { fetchSocial } from '../utils/fetchSocials'
 
 type Props = {
   projects: Project[]
@@ -47,7 +49,7 @@ function Projects({ projects }: Props) {
               <div className='flex items-center space-x-2 justify-center'>
                 {project?.technologies.map((technology) => (
                   <img
-                    className='h-10 w-10'
+                    className='h-8 w-8'
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt='img tech'
@@ -58,6 +60,11 @@ function Projects({ projects }: Props) {
               <p className='text-sm text-center md:text-left'>
                 {project?.summary}
               </p>
+
+              <a href={'project?.linktoBuild'} target='_blank' rel='noreferrer'>
+                link
+              </a>
+              {/* <a href={project?.linktoBuild}>linkToBuild</a> */}
             </div>
           </div>
         ))}
