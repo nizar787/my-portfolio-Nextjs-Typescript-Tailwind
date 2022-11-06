@@ -4,10 +4,10 @@ import { PageInfo } from '../typings'
 import { urlFor } from '../sanity'
 
 type Props = {
-  pageInfo:PageInfo
+  pageInfo: PageInfo
 }
 
-function About({pageInfo}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,18 +34,16 @@ function About({pageInfo}: Props) {
           once: true,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className='-mb-20 md:mb-0 flex-shrink-0 w-20 h-20 rounded-full object-cover md:rounded-lg md:w-32 md:h-32 
+        className='scale-90 -mb-20 md:mb-0 flex-shrink-0 w-20 h-20 rounded-full object-cover md:rounded-lg md:w-32 md:h-32
         xl:w-[150px] xl:h-[150px]'
       />
       <div className='space-y-10 px-0 md:px-10'>
-        <h4 className='text-2xl font-semibold'>
+        <h4 className=' scale-90 text-2xl font-semibold'>
           Here is a{' '}
           <span className='underline  decoration-[#F7AB0A]/50'>little</span>{' '}
           background
         </h4>
-        <p className='text-base'>
-          {pageInfo?.backgroundInformation}
-        </p>
+        <p className='scale-90 text-base'>{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   )

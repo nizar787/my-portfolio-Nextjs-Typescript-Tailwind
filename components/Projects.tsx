@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Project } from '../typings'
 import { urlFor } from '../sanity'
 import { SocialIcon } from 'react-social-icons'
-import { fetchSocial } from '../utils/fetchSocials'
+import Link from 'next/link'
 
 type Props = {
   projects: Project[]
@@ -20,11 +20,11 @@ function Projects({ projects }: Props) {
       <h4 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-l'>
         Projects
       </h4>
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
+      <div className=' scale-90 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-5 md:p-5 h-screen'
+            className=' scale-90 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-5 md:p-5 h-screen'
           >
             <motion.img
               initial={{
@@ -55,13 +55,21 @@ function Projects({ projects }: Props) {
                     alt='img tech'
                   />
                 ))}
+
+                <SocialIcon
+                  className='cursor-pointer'
+                  key={project._id}
+                  url={project.linktoBuild}
+                  fgColor='gray'
+                  bgColor='transparent'
+                />
               </div>
 
               <p className='text-sm text-center md:text-left'>
                 {project?.summary}
               </p>
 
-              <a href={'project?.linktoBuild'} target='_blank' rel='noreferrer'>
+              <a href={project?.linktoBuild} target='_blank' rel='noreferrer'>
                 link
               </a>
               {/* <a href={project?.linktoBuild}>linkToBuild</a> */}

@@ -5,12 +5,11 @@ import { urlFor } from '../sanity'
 import { PageInfo } from '../typings'
 import BackgroundCircles from './BackgroundCircles'
 
-type Props={
+type Props = {
   pageInfo: PageInfo
 }
 
-
-export default function Hero({pageInfo}:Props) {
+export default function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Hi, the Name's ${pageInfo?.name}`,
@@ -21,13 +20,14 @@ export default function Hero({pageInfo}:Props) {
     delaySpeed: 2000,
   })
   return (
-    <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden  '>
+    <div className=' h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden  '>
       <BackgroundCircles />
       <img
         className='relative rounded-full h-32 w-32 mx-auto object-cover'
-        src={urlFor(pageInfo?.heroImage).url()} alt="g"
+        src={urlFor(pageInfo?.heroImage).url()}
+        alt='g'
       />
-      <div className="z-20">
+      <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
           {pageInfo?.role}
         </h2>
@@ -47,9 +47,7 @@ export default function Hero({pageInfo}:Props) {
             <button className='heroButton'>Skills</button>
           </Link>
           <Link href='#projects'>
-            <button className='heroButton'>
-              Projects
-            </button>
+            <button className='heroButton'>Projects</button>
           </Link>
         </div>
       </div>
