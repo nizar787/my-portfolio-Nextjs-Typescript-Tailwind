@@ -20,8 +20,9 @@ function Projects({ projects }: Props) {
       <h4 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-l'>
         Projects
       </h4>
+
       <div className=' scale-90 relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-        {projects?.map((project, i) => (
+        {projects.map((project, i) => (
           <div
             key={project._id}
             className=' scale-90 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-5 md:p-5 h-screen'
@@ -57,9 +58,8 @@ function Projects({ projects }: Props) {
                 ))}
 
                 <SocialIcon
-                  className='cursor-pointer'
                   key={project._id}
-                  url={project.linktoBuild}
+                  url={project.linkToBuild}
                   fgColor='gray'
                   bgColor='transparent'
                 />
@@ -68,11 +68,6 @@ function Projects({ projects }: Props) {
               <p className='text-sm text-center md:text-left'>
                 {project?.summary}
               </p>
-
-              <a href={project?.linktoBuild} target='_blank' rel='noreferrer'>
-                link
-              </a>
-              {/* <a href={project?.linktoBuild}>linkToBuild</a> */}
             </div>
           </div>
         ))}
