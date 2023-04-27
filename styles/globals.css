@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    font-size: 80%;
+  }
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all
   hover:border-[#f7AB0A]/40 hover:text-[#f7AB0A]/40;

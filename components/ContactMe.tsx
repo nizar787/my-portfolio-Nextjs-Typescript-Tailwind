@@ -21,23 +21,23 @@ function ContactMe({}: Props) {
         Contact
       </h3>
       <div className='flex flex-col space-y-5'>
-        {/* <h4 className='text-xl font-semibold text-center'>
+        {/* <h4 className='text-md font-semibold text-center'>
           i have got just what you need.{' '}
           <span className='decoration-[#F7AB0A]/50 underline'>let us talk</span>
         </h4> */}
         <div className='space-y-10'>
-          {/* <div className='flex items-center space-x-5 justify-center'>
+          <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-xl'>+123456789</p>
-          </div> */}
+            <p className='text-md'> + 123 123456789</p>
+          </div>
           <div className='flex items-center space-x-4 justify-center'>
             <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse ' />
-            <p className='text-sm '>nizarharb7@gmail.com</p>
+            <p className='text-md '>nizarharb7@gmail.com</p>
           </div>
-          {/* <div className='flex items-center space-x-5 justify-center'>
+          <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-            <p className='text-xl'>123 developer lane</p>
-          </div> */}
+            <p className='text-md'> 123 Developer Lane</p>
+          </div>
         </div>
         <form
           className='flex flex-col space-y-2 w-2-screen md:fit mx-auto'
